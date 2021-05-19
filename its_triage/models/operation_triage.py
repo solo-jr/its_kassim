@@ -74,7 +74,8 @@ class OperationTriage(models.Model):
     def _compute_wage(self):
         for rec in self:
             wage_par_unit = float(self.env['ir.config_parameter'].sudo().get_param('its_triage.wage_per_unit'))
-            rec.wage = wage_par_unit * sum(rec.line_ids.mapped('quantity')) if rec.line_ids else 0
+            # rec.wage = wage_par_unit * sum(rec.line_ids.mapped('quantity')) if rec.line_ids else 0
+            rec.wage = wage_par_unit * rec.output_quantity if rec.output_quantity else 0
 
     def action_sort(self):
         """
