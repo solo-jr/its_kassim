@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0-20200409\n"
+"Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-11 14:59+0000\n"
-"PO-Revision-Date: 2021-05-11 14:59+0000\n"
+"POT-Creation-Date: 2021-05-19 21:03+0000\n"
+"PO-Revision-Date: 2021-05-19 21:03+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -769,6 +769,12 @@ msgid "Is Follower"
 msgstr ""
 
 #. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_product_product__is_an_all_round_bag
+#: model:ir.model.fields,field_description:its_triage.field_product_template__is_an_all_round_bag
+msgid "Is an all-round bag"
+msgstr "Est un sac tout venant"
+
+#. module: its_triage
 #: model:ir.model,name:its_triage.model_account_move
 msgid "Journal Entries"
 msgstr "Pièces comptables"
@@ -1008,12 +1014,19 @@ msgid "Number of unread messages"
 msgstr ""
 
 #. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__numbers_of_all_round_bags
+msgid "Numbers of all-round bags"
+msgstr "Nombres de sacs tout venant"
+
+#. module: its_triage
 #: code:addons/its_triage/models/operation_triage.py:0
 #, python-format
 msgid ""
 "On the product %s you cannot associate the value %s with the attribute %s "
 "because they do not match."
 msgstr ""
+"Sur le produit %s vous ne pouvez pas associer la valeur %s à l'attribut%s "
+"car ils ne correspondent pas."
 
 #. module: its_triage
 #: model_terms:ir.ui.view,arch_db:its_triage.operation_capacity_form
@@ -1216,6 +1229,11 @@ msgstr "Article"
 #: model:ir.model.fields,field_description:its_triage.field_operation_triage__attribute_line_ids
 msgid "Product Attributes"
 msgstr ""
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
 
 #. module: its_triage
 #: model:ir.model.fields,field_description:its_triage.field_operation_triage__product_ids
@@ -1781,6 +1799,12 @@ msgstr "Export XLSX"
 #, python-format
 msgid "You Cannot Delete Done Payslips Batches"
 msgstr "Vous ne pouvez pas supprimer les lots de bulleints de paie terminés"
+
+#. module: its_triage
+#: code:addons/its_triage/models/operation_triage.py:0
+#, python-format
+msgid "not enough bag, there are only %s bags"
+msgstr "Pas assez de sacs, il n'y a que %s sacs"
 
 #. module: its_triage
 #: model:ir.model,name:its_triage.model_purchase_xlsx_report

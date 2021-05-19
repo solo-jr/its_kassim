@@ -44,6 +44,7 @@ class OperationTriage(models.Model):
     uom_name = fields.Char(string='Unit of Measure Name', related='uom_id.name', readonly=True)
     qty_available = fields.Float(string='Quantity On Hand', digits='Product Unit of Measure', tracking=True,
                                  compute='_compute_qty_available')
+    numbers_of_all_round_bags = fields.Float("Numbers of all-round bags")
 
     attribute_line_ids = fields.One2many('triage.attribute.line', 'triage_id', 'Product Attributes',
                                          copy=True)
@@ -133,7 +134,14 @@ class OperationTriage(models.Model):
                     self.env['stock.quant']._update_available_quantity(list_id.product_id,
                                                                        self.env.ref('stock.stock_location_stock'),
                                                                        -list_id.output_quantity)
-
+            if rec.type == 'manual' and rec.numbers_of_all_round_bags > 0:
+                all_round_bags = self.env['product.template'].search([('is_an_all_round_bag', '=', True)])
+                if all_round_bags:
+                    if all_round_bags[0].qty_available < rec.numbers_of_all_round_bags:
+                        raise UserError(_('not enough bag, there are only %s bags') % all_round_bags[0].qty_available)
+                    self.env['stock.quant']._update_available_quantity(all_round_bags[0].product_variant_ids[0],
+                                                                       self.env.ref('stock.stock_location_stock'),
+                                                                       -rec.numbers_of_all_round_bags)
             # Update the product quantity per variant
             for value in rec.line_ids:
                 product_variant_ids = product_ids.mapped('product_variant_ids')

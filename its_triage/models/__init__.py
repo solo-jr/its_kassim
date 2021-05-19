@@ -19,6 +19,7 @@
 #
 ##############################################################################
 
+from . import product_template
 from . import operation_triage
 from . import operation_packaging
 from . import operation_payslip

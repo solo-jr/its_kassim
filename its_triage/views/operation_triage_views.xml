@@ -98,6 +98,7 @@
                        attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
                 <field name="uom_name" style="margin-left: 5px;" class="oe_read_only"/>
               </div>
+              <field name="numbers_of_all_round_bags" attrs="{'invisible': [('type', '!=', 'manual')]}"/>
             </group>
           </group>
           <notebook>

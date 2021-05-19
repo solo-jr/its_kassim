@@ -53,6 +53,7 @@ This module adds feature to manage triage in Odoo
         'views/stock_picking_views.xml',
         'views/res_config_settings_views.xml',
         'views/menu_view.xml',
+        'views/product_template_views.xml',
         # wizards
         'wizard/update_quantity_wizard_views.xml',
     ],
