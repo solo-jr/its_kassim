@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_operation_triage,access.operation_triage,model_operation_triage,,1,1,1,1
+access_operation_packaging,access.operation_packaging,model_operation_packaging,,1,1,1,1
+access_operation_packaging_line,access.operation_packaging_line,model_operation_packaging_line,,1,1,1,1
+access_operation_capacity,access.operation_capacity,model_operation_capacity,,1,1,1,1
+access_operation_payslip_run,access.operation_payslip_run,model_operation_payslip_run,,1,1,1,1
+access_operation_payslip,access.operation_payslip,model_operation_payslip,,1,1,1,1
+access_operation_payslip_line,access.operation_payslip_line,model_operation_payslip_line,,1,1,1,1
+access_triage_attribute_line,access.triage_attribute_line,model_triage_attribute_line,,1,1,1,1
+access_triage_line,access.triage_line,model_triage_line,,1,1,1,1
+access_triage_attribute_value,access.triage_attribute_value,model_triage_attribute_value,,1,1,1,1
+access_triage_product,access.triage_product,model_triage_product,,1,1,1,1

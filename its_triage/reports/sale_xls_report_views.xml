@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="view_sale_report_form">
+      <field name="name">sale.xlsx.report.form</field>
+      <field name="model">sale.xlsx.report</field>
+      <field name="arch" type="xml">
+        <form string="Export Excel">
+          <div class="alert alert-warning" role="alert">
+            <i class="fa fa-exclamation-circle"></i>
+            Exporting orders for the following period.
+          </div>
+          <sheet>
+            <group>
+              <label for="date_start" string="Period"/>
+              <div class="o_row">
+                <field name="date_start" widget="daterange" nolabel="1" class="oe_inline"
+                       options="{'related_end_date': 'date_end'}" required="1"/>
+                <i class="fa fa-long-arrow-right mx-2" aria-label="Arrow icon" title="Arrow"/>
+                <field name="date_end" widget="daterange" nolabel="1" class="oe_inline"
+                       options="{'related_start_date': 'date_start'}" required="1"/>
+              </div>
+            </group>
+          </sheet>
+          <footer>
+            <button string="Export" name="action_export" type="object" class="btn-primary" icon="fa-file-excel-o"/>
+            <button string="Cancel" class="btn-secondary" special="cancel"/>
+          </footer>
+        </form>
+      </field>
+    </record>
+
+    <record id="sale_xls_report_menu_action" model="ir.actions.act_window">
+      <field name="name">XLSX Export</field>
+      <field name="res_model">sale.xlsx.report</field>
+      <field name="target">new</field>
+      <field name="view_id" ref="view_sale_report_form"/>
+    </record>
+
+  </data>
+</odoo>

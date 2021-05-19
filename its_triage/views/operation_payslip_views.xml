@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <!-- Operation Payslip -->
+    <record id="operation_payslip_tree" model="ir.ui.view">
+      <field name="name">operation.payslip.tree</field>
+      <field name="model">operation.payslip</field>
+      <field name="arch" type="xml">
+        <tree string="Payslips" decoration-muted="state in ('cancel')"
+              decoration-info="state in ('verify')"
+              decoration-success="state in ('done')">
+          <field name="currency_id" invisible="1"/>
+          <field name="number"/>
+          <field name="employee_id"/>
+          <field name="name"/>
+          <field name="date_from"/>
+          <field name="date_to"/>
+          <field name="subtotal" invisible="1"/>
+          <field name="twenty_k_ticket" sum="Total ticket"/>
+          <field name="ten_k_ticket" sum="Total ticket"/>
+          <field name="five_k_ticket" sum="Total ticket"/>
+          <field name="two_k_ticket" sum="Total ticket"/>
+          <field name="one_k_ticket" sum="Total ticket"/>
+          <field name="amount_total" widget="monetary" sum="Total amount"/>
+          <field name="state"/>
+          <field name="payslip_run_id" invisible="1"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Operation Payslip Form View -->
+    <record id="operation_payslip_form" model="ir.ui.view">
+      <field name="name">operation.payslip.form</field>
+      <field name="model">operation.payslip</field>
+      <field name="arch" type="xml">
+        <form string="Payslip">
+          <header>
+            <button string="Confirm" name="set_to_done" type="object" states="draft"
+                    class="oe_highlight"/>
+            <!--<button string="Refund" name="refund_sheet" states="verify,done" type='object'/>-->
+            <button string="Set to Draft" name="set_to_draft" type="object" states="cancel"/>
+            <button string="Compute Sheet" name="compute_sheet" type="object" states="draft"
+                    class="oe_highlight"/>
+            <button string="Cancel Payslip" name="set_to_draft" type="object"
+                    states="draft,verify,done"/>
+            <field name="state" widget="statusbar" statusbar_visible="draft,verify,done"/>
+          </header>
+          <sheet>
+            <widget name="web_ribbon" title="Done" bg_color="bg-success"
+                    attrs="{'invisible': [('state', '!=', 'done')]}"/>
+            <div class="oe_title">
+              <label for="employee_id" class="oe_edit_only"/>
+              <h1>
+                <field name="employee_id" placeholder="Employee"/>
+              </h1>
+            </div>
+            <field name="currency_id" invisible="1"/>
+            <group col="4">
+              <label for="date_from" string="Period"/>
+              <div>
+                <field name="date_from" class="oe_inline"/>
+                -
+                <field name="date_to" class="oe_inline"/>
+              </div>
+              <field name="contract_id"
+                     domain="[('employee_id','=',employee_id),('date_start','&lt;=',date_to),'|',('date_end','&gt;=',date_from),('date_end','=',False)]"
+                     context="{'default_employee_id': employee_id}"/>
+              <field name="number"/>
+              <field name="name"/>
+              <field name="credit_note"/>
+            </group>
+            <notebook>
+              <page string="Worked Days">
+                <separator string="Worked Days"/>
+                <field name="line_ids" widget="section_and_note_one2many">
+                  <tree string="Worked Days" editable="bottom">
+                    <control>
+                      <create name="add_line_control" string="Add a line"/>
+                      <create name="add_section_control" string="Add a section"
+                              context="{'default_display_type': 'line_section'}"/>
+                    </control>
+                    <field name="display_type" invisible="1"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="sequence" widget="handle"/>
+                    <field name="name" widget="section_and_note_text"/>
+                    <field name="product_template_attribute_value_ids" widget="many2many_tags"/>
+                    <field name="quantity"/>
+                    <field name="amount"/>
+                    <field name="total" widget="monetary"/>
+                  </tree>
+                </field>
+                <group class="oe_subtotal_footer">
+                  <field name="twenty_k_ticket" class="text-danger"/>
+                  <field name="ten_k_ticket" class="text-danger"/>
+                  <field name="five_k_ticket" class="text-danger"/>
+                  <field name="two_k_ticket" class="text-danger"/>
+                  <field name="one_k_ticket" class="text-danger"/>
+                  <field name="wage" class="oe_subtotal_footer_separator" widget="monetary"/>
+                  <field name="subtotal" invisible="1"/>
+                  <field name="amount_total" class="oe_subtotal_footer_separator" widget="monetary"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+          <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers"/>
+            <field name="activity_ids" widget="mail_activity"/>
+            <field name="message_ids" widget="mail_thread" options="{'post_refresh': 'recipients'}"/>
+          </div>
+        </form>
+      </field>
+    </record>
+
+    <!-- Operation Payslip Pivot View -->
+    <record id="operation_payslip_pivot" model="ir.ui.view">
+      <field name="name">operation.payslip.pivot</field>
+      <field name="model">operation.payslip</field>
+      <field name="arch" type="xml">
+        <pivot string="Payslips Analysis">
+          <field name="create_date" interval="month" type="col"/>
+          <field name="payslip_run_id" type="row"/>
+          <field name="employee_id" type="row"/>
+          <field name="twenty_k_ticket" type="measure"/>
+          <field name="ten_k_ticket" type="measure"/>
+          <field name="five_k_ticket" type="measure"/>
+          <field name="two_k_ticket" type="measure"/>
+          <field name="one_k_ticket" type="measure"/>
+          <field name="amount_total" type="measure"/>
+        </pivot>
+      </field>
+    </record>
+
+    <!-- Operation Payslip Graph View -->
+    <record id="operation_payslip_graph" model="ir.ui.view">
+      <field name="name">operation.payslip.graph</field>
+      <field name="model">operation.payslip</field>
+      <field name="arch" type="xml">
+        <graph string="Payslip">
+          <field name="payslip_run_id"/>
+          <field name="employee_id"/>
+          <field name="amount_total" type="measure"/>
+        </graph>
+      </field>
+    </record>
+
+    <!-- Operation Payslip Search View -->
+    <record id="operation_payslip_search" model="ir.ui.view">
+      <field name="name">operation.payslip.search</field>
+      <field name="model">operation.payslip</field>
+      <field name="arch" type="xml">
+        <search string="Search Payslips">
+          <field name="name" string="Payslips"
+                 filter_domain="['|',('name','ilike',self),('number','ilike',self)]"/>
+          <filter string="Draft" name="draft" domain="[('state','=','draft')]" help="Draft Slip"/>
+          <filter string="Done" name="done" domain="[('state','=','done')]" help="Done Slip"/>
+          <field name="employee_id"/>
+          <field name="payslip_run_id"/>
+          <separator/>
+          <filter string="Date From" name="date_from" date="date_from" default_period="this_month"/>
+          <group expand="0" string="Group By">
+            <filter string="Employee" name="employee_id" context="{'group_by':'employee_id'}"/>
+            <filter string="PaySlip Batch" name="payslip_run_id" context="{'group_by':'payslip_run_id'}"/>
+            <filter string="State" name="state" context="{'group_by':'state'}"/>
+          </group>
+        </search>
+      </field>
+    </record>
+
+    <!-- Operation Payslip Action-->
+    <record id="operation_payslip_menu_action" model="ir.actions.act_window">
+      <field name="name">Payslips</field>
+      <field name="res_model">operation.payslip</field>
+      <field name="view_mode">pivot,tree,form,graph</field>
+      <field name="context">{"search_default_date_from":1}</field>
+      <field name="search_view_id" ref="operation_payslip_search"/>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+          Create a new payslip
+        </p>
+      </field>
+    </record>
+
+    <!-- Operation Payslip Run -->
+    <!-- Operation Payslip Run Tree View -->
+    <record id="operation_payslip_run_tree" model="ir.ui.view">
+      <field name="name">operation.payslip.run.tree</field>
+      <field name="model">operation.payslip.run</field>
+      <field name="arch" type="xml">
+        <tree string="Payslips Batches">
+          <field name="name"/>
+          <field name="date_start"/>
+          <field name="date_end"/>
+          <field name="credit_note"/>
+          <field name="state"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Operation Payslip Run Search View -->
+    <record id="operation_payslip_run_search" model="ir.ui.view">
+      <field name="name">operation.payslip.run.search</field>
+      <field name="model">operation.payslip.run</field>
+      <field name="arch" type="xml">
+        <search string="Search Payslip Batches">
+          <field name="name" string="Payslip Batches"/>
+          <field name="date_start"/>
+          <field name="date_end"/>
+          <filter string="Draft" name="draft" domain="[('state','=','draft')]" help="Draft Payslip Batches"/>
+          <filter name="done_filter" string="Done" domain="[('state','=','close')]"
+                  help="Done Payslip Batches"/>
+        </search>
+      </field>
+    </record>
+
+    <!-- Operation Payslip Run Search Form -->
+    <record id="operation_payslip_run_form" model="ir.ui.view">
+      <field name="name">operation.payslip.run.form</field>
+      <field name="model">operation.payslip.run</field>
+      <field name="arch" type="xml">
+        <form string="Payslips Batches">
+          <header>
+            <button name="compute_sheet" type="object" states="draft"
+                    string="Generate Payslips" class="oe_highlight"/>
+            <button string="Set to Draft" name="set_to_draft" type="object" states="closed"/>
+            <button string="Mark As Done" name="set_to_done" type="object" states="draft"
+                    class="oe_highlight"/>
+            <button name="set_to_close" type="object" string="Close" states="draft"/>
+            <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+          </header>
+          <sheet>
+            <div class="oe_button_box" name="button_box">
+              <button name="action_open_payslip" type="object"
+                      class="oe_stat_button" icon="fa-money"
+                      attrs="{'invisible': [('payslip_count', '=', 0)]}">
+                <div class="o_stat_info">
+                  <field name="payslip_count" class="o_stat_value"/>
+                  <span class="o_stat_text">Payslips</span>
+                </div>
+              </button>
+            </div>
+            <widget name="web_ribbon" title="Done" bg_color="bg-success"
+                    attrs="{'invisible': [('state', '!=', 'done')]}"/>
+            <label for="name" class="oe_edit_only"/>
+            <h1>
+              <field name="name"/>
+            </h1>
+            <group col="4">
+              <label for="date_start" string="Period"/>
+              <div class="o_row">
+                <field name="date_start" widget="daterange" nolabel="1" class="oe_inline"
+                       options="{'related_end_date': 'date_end'}"/>
+                <i class="fa fa-long-arrow-right mx-2" aria-label="Arrow icon" title="Arrow"/>
+                <field name="date_end" widget="daterange" nolabel="1" class="oe_inline"
+                       options="{'related_start_date': 'date_start'}"/>
+              </div>
+              <field name="credit_note"/>
+            </group>
+            <separator string="Payslips"/>
+            <field name="slip_ids">
+              <tree widget="one2many_list" decoration-muted="state in ('cancel')"
+                    decoration-info="state in ('verify')"
+                    decoration-success="state in ('done')">
+                <field name="currency_id" invisible="1"/>
+                <field name="number"/>
+                <field name="employee_id"/>
+                <field name="name"/>
+                <field name="amount_total" widget="monetary" sum="Total amount"/>
+                <field name="state"/>
+                <field name="payslip_run_id" invisible="1"/>
+              </tree>
+            </field>
+          </sheet>
+          <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers"/>
+            <field name="activity_ids" widget="mail_activity"/>
+            <field name="message_ids" widget="mail_thread" options="{'post_refresh': 'recipients'}"/>
+          </div>
+        </form>
+      </field>
+    </record>
+
+    <!-- Operation Payslip Run Action-->
+    <record id="operation_payslip_run_menu_action" model="ir.actions.act_window">
+      <field name="name">Payslips Batches</field>
+      <field name="res_model">operation.payslip.run</field>
+      <field name="view_mode">tree,form</field>
+      <field name="search_view_id" ref="operation_payslip_run_search"/>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+          Create a new payslip batch
+        </p>
+      </field>
+    </record>
+
+  </data>
+</odoo>

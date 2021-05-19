@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <menuitem id="triage_menu_root" name="Triages" sequence="1"
+            web_icon="its_triage,static/description/icon.png"/>
+
+  <!-- Management Menu -->
+  <menuitem id="management_menu" name="Operations" parent="triage_menu_root"
+            sequence="1"/>
+  <menuitem id="automations_menu" name="Automations" parent="management_menu" action="operation_triage_menu_action"
+            sequence="1"/>
+  <menuitem id="manuals_menu" name="Manuals" parent="management_menu" action="operation_manual_triage_menu_action"
+            sequence="2"/>
+  <menuitem id="smalls_menu" name="Smalls" parent="management_menu" action="operation_small_triage_menu_action"
+            sequence="3"/>
+  <menuitem id="packagings_menu" name="Packagings" parent="management_menu" action="operation_packaging_menu_action"
+            sequence="4"/>
+
+  <!-- Master Data Menu -->
+  <menuitem id="master_data_menu" name="Master Data" parent="triage_menu_root" sequence="2"/>
+  <menuitem id="products_menu" name="Products" parent="master_data_menu" action="stock.product_template_action_product"
+            sequence="1"/>
+  <menuitem id="employees_menu" name="Employees" parent="master_data_menu" action="hr.open_view_employee_list_my"
+            sequence="2"/>
+
+  <!-- Payroll -->
+  <menuitem id="payroll_menu" name="Payroll" parent="triage_menu_root" sequence="3"/>
+  <menuitem id="payslips_batches_menu" name="Payslips Batches" parent="payroll_menu"
+            action="operation_payslip_run_menu_action"
+            sequence="1"/>
+  <menuitem id="payslips_menu" name="Employee Payslips" parent="payroll_menu"
+            action="operation_payslip_menu_action"
+            sequence="2"/>
+
+  <!-- Triage XLSX Report Menu -->
+  <menuitem id="report_menu" name="Reporting" parent="triage_menu_root" sequence="4"/>
+  <menuitem id="triage_xls_report_report_menu" name="XLSX Export" parent="report_menu"
+            action="triage_xls_report_menu_action"
+            sequence="1"/>
+
+  <!-- Settings Menu -->
+  <menuitem id="settings_menu" name="Settings" parent="triage_menu_root" action="config_settings_action" sequence="4"/>
+
+  <!-- Purchase XLSX Report Menu -->
+  <menuitem id="purchase_xls_report_report_menu" name="XLSX Export" parent="purchase.purchase_report"
+            action="purchase_xls_report_menu_action"
+            sequence="2"/>
+
+  <!-- Sale XLSX Report Menu -->
+  <menuitem id="sale_xls_report_report_menu" name="XLSX Export" parent="sale.menu_sale_report"
+            action="sale_xls_report_menu_action"
+            sequence="2"/>
+
+</odoo>

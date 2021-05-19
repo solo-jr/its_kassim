@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <record id="purchase_order_form_inherit" model="ir.ui.view">
+      <field name="name">its.purchase.order.form.inherit</field>
+      <field name="model">purchase.order</field>
+      <field name="inherit_id" ref="purchase.purchase_order_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='order_line']/tree//field[@name='name']" position="after">
+          <field name="number_of_bags"/>
+          <field name="bag_capacity_id" options='{"no_open": True, "no_create": True}'/>
+        </xpath>
+        <xpath expr="//field[@name='order_line']" position="after">
+          <group>
+            <group string="Fees">
+              <field name="freight_charges" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+              <field name="docker_fees" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+            </group>
+          </group>
+        </xpath>
+        <xpath expr="//field[@name='date_approve']" position="after">
+          <field name="truck_number"/>
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</odoo>

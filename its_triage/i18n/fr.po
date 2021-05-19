@@ -1,0 +1,1798 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* its_triage
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20200409\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-11 14:59+0000\n"
+"PO-Revision-Date: 2021-05-11 14:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: its_triage
+#: code:addons/its_triage/models/operation_payslip.py:0
+#, python-format
+msgid "%s / Output Date : %s - Entry Date : %s"
+msgstr "%s / Date de sortie : %s - Date d'entrée : %s"
+
+#. module: its_triage
+#: model:ir.model.fields,help:its_triage.field_operation_payslip__state
+msgid ""
+"* When the payslip is created the status is 'Draft'\n"
+"                \n"
+"* If the payslip is under verification, the status is 'Waiting'.\n"
+"                \n"
+"* If the payslip is confirmed then status is set to 'Done'.\n"
+"                \n"
+"* When user cancel payslip the status is 'Rejected'."
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__ten_k_ticket
+msgid "10k Ticket"
+msgstr "Billet 10k"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__one_k_ticket
+msgid "1k Ticket"
+msgstr "Billet 1k"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__twenty_k_ticket
+msgid "20k Ticket"
+msgstr "Billet 20k"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__two_k_ticket
+msgid "2k Ticket"
+msgstr "Billet 2k"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__five_k_ticket
+msgid "5k Ticket"
+msgstr "Billet 5k"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.view_purchase_report_form
+#: model_terms:ir.ui.view,arch_db:its_triage.view_sale_report_form
+msgid ""
+"<i class=\"fa fa-exclamation-circle\"/>\n"
+"            Exporting orders for the following period."
+msgstr ""
+"<i class=\"fa fa-exclamation-circle\"/>\n"
+"            Exportation de commandes pour la période suivante."
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.view_triage_report_form
+msgid ""
+"<i class=\"fa fa-exclamation-circle\"/>\n"
+"            Exporting triages for the following period."
+msgstr ""
+"<i class=\"fa fa-exclamation-circle\"/>\n"
+"            Exporter les triages pour la période suivante."
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.update_quantity_wizard_view
+msgid ""
+"<i class=\"fa fa-exclamation-circle\"/>\n"
+"          Updating quantity on hand for the following product."
+msgstr ""
+"<i class=\"fa fa-exclamation-circle\"/>\n"
+"          Mise à jour de la quantité disponible pour le produit suivant."
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_run_form
+#: model_terms:ir.ui.view,arch_db:its_triage.view_purchase_report_form
+#: model_terms:ir.ui.view,arch_db:its_triage.view_sale_report_form
+#: model_terms:ir.ui.view,arch_db:its_triage.view_triage_report_form
+msgid ""
+"<i class=\"fa fa-long-arrow-right mx-2\" aria-label=\"Arrow icon\" "
+"title=\"Arrow\"/>"
+msgstr ""
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.res_config_settings_view_form
+msgid ""
+"<i class=\"fa fa-wrench\"/>\n"
+"                  Settings"
+msgstr ""
+"<i class=\"fa fa-wrench\"/>\n"
+"                  Configuration"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_run_form
+msgid "<span class=\"o_stat_text\">Payslips</span>"
+msgstr "<span class=\"o_stat_text\">Bulletins de paie</span>"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_triage_form
+msgid ""
+"<strong>Warning</strong>: adding or deleting attributes\n"
+"                will delete and recreate existing values and lead\n"
+"                to the loss of their possible customizations."
+msgstr ""
+"<strong>> Avertissement </strong>: l'ajout ou la suppression d'attributs\n"
+"                  supprimera et recréera les valeurs existantes\n"
+"                 à la perte de leurs personnalisations éventuelles."
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__apmf
+msgid "APMF"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__message_needaction
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__message_needaction
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__message_needaction
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_capacity__active
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_line__active
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_value__ptav_active
+msgid "Active"
+msgstr "Actif"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__activity_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__activity_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__activity_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__activity_exception_decoration
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__activity_exception_decoration
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__activity_exception_decoration
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__activity_state
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__activity_state
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__activity_state
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_form
+msgid "Add a line"
+msgstr ""
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_form
+msgid "Add a section"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__amount
+msgid "Amount"
+msgstr "Montant"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__amount_total
+msgid "Amount total"
+msgstr "Montant total"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__application_fees
+msgid "Application fees"
+msgstr "Frais de dossier"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_triage_form
+msgid "Are you sure you want to cancel this operation?"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__message_attachment_count
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__message_attachment_count
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__message_attachment_count
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_line__attribute_id
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_value__attribute_id
+msgid "Attribute"
+msgstr "Caractéristique"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_value__attribute_line_id
+msgid "Attribute Line"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_value__product_attribute_value_id
+msgid "Attribute Value"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__product_template_attribute_value_ids
+#: model:ir.model.fields,field_description:its_triage.field_triage_line__product_template_attribute_value_ids
+msgid "Attribute Values"
+msgstr "Valeurs de caractéristiques"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: model:ir.model.fields.selection,name:its_triage.selection__operation_triage__type__auto
+#: model:ir.model.fields.selection,name:its_triage.selection__triage_xlsx_report__type__auto
+#, python-format
+msgid "Auto"
+msgstr "Automatique"
+
+#. module: its_triage
+#: model:ir.actions.act_window,name:its_triage.operation_triage_menu_action
+#: model:ir.ui.menu,name:its_triage.automations_menu
+msgid "Automations"
+msgstr "Automatisations"
+
+#. module: its_triage
+#: model:ir.actions.act_window,name:its_triage.operation_capacity_action
+#: model_terms:ir.ui.view,arch_db:its_triage.res_config_settings_view_form
+msgid "Bag Capacities"
+msgstr "Capacités du sac"
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_operation_capacity
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging_line__bag_capacity_id
+#: model:ir.model.fields,field_description:its_triage.field_purchase_order_line__bag_capacity_id
+#: model:ir.model.fields,field_description:its_triage.field_sale_order_line__bag_capacity_id
+#: model:ir.model.fields,field_description:its_triage.field_stock_move__bag_capacity
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard_line__bag_capacity_id
+msgid "Bag Capacity"
+msgstr "Capacité du sac"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__boarding_and_scan
+msgid "Boarding + scan"
+msgstr "Embarquement + scan"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__ccco_commerce_law
+msgid "CCCO Commerce Law"
+msgstr "Droit CCCO Commerce"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_triage_form
+#: model_terms:ir.ui.view,arch_db:its_triage.update_quantity_wizard_view
+#: model_terms:ir.ui.view,arch_db:its_triage.view_purchase_report_form
+#: model_terms:ir.ui.view,arch_db:its_triage.view_sale_report_form
+#: model_terms:ir.ui.view,arch_db:its_triage.view_triage_report_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_form
+msgid "Cancel Payslip"
+msgstr "Annuler la fiche de paie"
+
+#. module: its_triage
+#: model:ir.model.fields.selection,name:its_triage.selection__operation_triage__state__cancelled
+msgid "Cancelled"
+msgstr "Annulé"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_capacity__capacity
+msgid "Capacity"
+msgstr "Capacité"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__certificate_of_origin
+msgid "Certificate of origin right"
+msgstr "Droit certificat d'origine"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_run_form
+msgid "Close"
+msgstr "Fermer"
+
+#. module: its_triage
+#: model:ir.model.fields.selection,name:its_triage.selection__operation_payslip_run__state__closed
+msgid "Closed"
+msgstr "Fermé"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.update_quantity_wizard_view
+msgid "Commission Invoicing"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__company_id
+msgid "Company"
+msgstr ""
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_form
+msgid "Compute Sheet"
+msgstr "Calculer la feuille"
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de config"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_form
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__contract_id
+msgid "Contract"
+msgstr "Contrat"
+
+#. module: its_triage
+#: model_terms:ir.actions.act_window,help:its_triage.operation_capacity_action
+msgid "Create a new bag capacity"
+msgstr "Créez une nouvelle capacité de sac"
+
+#. module: its_triage
+#: model_terms:ir.actions.act_window,help:its_triage.operation_manual_triage_menu_action
+msgid "Create a new manual triage"
+msgstr "Créez un nouveau triage manuel"
+
+#. module: its_triage
+#: model_terms:ir.actions.act_window,help:its_triage.operation_payslip_menu_action
+msgid "Create a new payslip"
+msgstr "Créez un nouveau bulletin de paie"
+
+#. module: its_triage
+#: model_terms:ir.actions.act_window,help:its_triage.operation_payslip_run_menu_action
+msgid "Create a new payslip batch"
+msgstr "Créez un nouveau lot de bulletins de paie"
+
+#. module: its_triage
+#: model_terms:ir.actions.act_window,help:its_triage.operation_small_triage_menu_action
+msgid "Create a new small triage"
+msgstr ""
+
+#. module: its_triage
+#: model_terms:ir.actions.act_window,help:its_triage.operation_triage_menu_action
+msgid "Create an new automatic triage"
+msgstr "Créez un nouveau triage automatique"
+
+#. module: its_triage
+#: model_terms:ir.actions.act_window,help:its_triage.operation_packaging_menu_action
+msgid "Create an new packaging"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_capacity__create_uid
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__create_uid
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging_line__create_uid
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__create_uid
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__create_uid
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__create_uid
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__create_uid
+#: model:ir.model.fields,field_description:its_triage.field_purchase_xlsx_report__create_uid
+#: model:ir.model.fields,field_description:its_triage.field_sale_xlsx_report__create_uid
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_line__create_uid
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_value__create_uid
+#: model:ir.model.fields,field_description:its_triage.field_triage_line__create_uid
+#: model:ir.model.fields,field_description:its_triage.field_triage_product__create_uid
+#: model:ir.model.fields,field_description:its_triage.field_triage_xlsx_report__create_uid
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard__create_uid
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_capacity__create_date
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__create_date
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging_line__create_date
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__create_date
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__create_date
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__create_date
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__create_date
+#: model:ir.model.fields,field_description:its_triage.field_purchase_xlsx_report__create_date
+#: model:ir.model.fields,field_description:its_triage.field_sale_xlsx_report__create_date
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_line__create_date
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_value__create_date
+#: model:ir.model.fields,field_description:its_triage.field_triage_line__create_date
+#: model:ir.model.fields,field_description:its_triage.field_triage_product__create_date
+#: model:ir.model.fields,field_description:its_triage.field_triage_xlsx_report__create_date
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard__create_date
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__credit_note
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__credit_note
+msgid "Credit Note"
+msgstr "Avoir"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__currency_id
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__currency_id
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__disbursement_costs
+msgid "Customs disbursement costs"
+msgstr "Frais du debours en douane"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__dhl_shipping
+msgid "DHL Shipping"
+msgstr "Expedition DHL"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__date
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_triage_search
+#, python-format
+msgid "Date"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__date_from
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__date_from
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__date_start
+#: model:ir.model.fields,field_description:its_triage.field_purchase_xlsx_report__date_start
+#: model:ir.model.fields,field_description:its_triage.field_sale_xlsx_report__date_start
+#: model:ir.model.fields,field_description:its_triage.field_triage_xlsx_report__date_start
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_search
+msgid "Date From"
+msgstr "Date début"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__date_to
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__date_to
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__date_end
+#: model:ir.model.fields,field_description:its_triage.field_purchase_xlsx_report__date_end
+#: model:ir.model.fields,field_description:its_triage.field_sale_xlsx_report__date_end
+#: model:ir.model.fields,field_description:its_triage.field_triage_xlsx_report__date_end
+msgid "Date To"
+msgstr "Date fin"
+
+#. module: its_triage
+#: model:ir.model.fields,help:its_triage.field_operation_triage__uom_id
+msgid "Default unit of measure used for all stock operations."
+msgstr ""
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: model_terms:ir.ui.view,arch_db:its_triage.view_order_form_inherit
+#, python-format
+msgid "Departure costs"
+msgstr "Frais de départ"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_capacity__display_name
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__display_name
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging_line__display_name
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__display_name
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__display_name
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__display_name
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__display_name
+#: model:ir.model.fields,field_description:its_triage.field_purchase_xlsx_report__display_name
+#: model:ir.model.fields,field_description:its_triage.field_sale_xlsx_report__display_name
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_line__display_name
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_value__display_name
+#: model:ir.model.fields,field_description:its_triage.field_triage_line__display_name
+#: model:ir.model.fields,field_description:its_triage.field_triage_product__display_name
+#: model:ir.model.fields,field_description:its_triage.field_triage_xlsx_report__display_name
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard__display_name
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__display_type
+msgid "Display Type"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_purchase_order__docker_fees
+msgid "Docker Fees"
+msgstr "Frais Docker"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__docker_stuffing_costs
+msgid "Docker stuffing costs"
+msgstr "Frais docker empotage"
+
+#. module: its_triage
+#: model:ir.model.fields.selection,name:its_triage.selection__operation_payslip__state__done
+#: model:ir.model.fields.selection,name:its_triage.selection__operation_payslip_run__state__done
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_form
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_run_form
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_run_search
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_search
+msgid "Done"
+msgstr "Fait"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_run_search
+msgid "Done Payslip Batches"
+msgstr ""
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_search
+msgid "Done Slip"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields.selection,name:its_triage.selection__operation_payslip__state__draft
+#: model:ir.model.fields.selection,name:its_triage.selection__operation_payslip_run__state__draft
+#: model:ir.model.fields.selection,name:its_triage.selection__operation_triage__state__draft
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_run_search
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_search
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_run_search
+msgid "Draft Payslip Batches"
+msgstr ""
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_search
+msgid "Draft Slip"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.constraint,message:its_triage.constraint_triage_attribute_value_attribute_value_unique
+msgid "Each value should be defined only once per attribute per product."
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__employee_id
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__employee_id
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__employee_id
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_manual_triage_search
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_form
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_search
+msgid "Employee"
+msgstr "Employé"
+
+#. module: its_triage
+#: model:ir.ui.menu,name:its_triage.payslips_menu
+msgid "Employee Payslips"
+msgstr "Bulletins de l'employé"
+
+#. module: its_triage
+#: model:ir.model.fields,help:its_triage.field_operation_payslip__amount_total
+#: model:ir.model.fields,help:its_triage.field_operation_payslip__wage
+#: model:ir.model.fields,help:its_triage.field_operation_triage__wage
+msgid "Employee's weekly gross wage."
+msgstr "Salaire hebdomadaire brut de l'employé."
+
+#. module: its_triage
+#: model:ir.ui.menu,name:its_triage.employees_menu
+msgid "Employees"
+msgstr "Employés"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: code:addons/its_triage/controllers/main.py:0
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__entry_date
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_manual_triage_search
+#, python-format
+msgid "Entry Date"
+msgstr "Date d'entrée"
+
+#. module: its_triage
+#: code:addons/its_triage/models/operation_triage.py:0
+#, python-format
+msgid "Entry date is required. Please fill it."
+msgstr "La date d'entrée est requise. Veuillez le remplir."
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_manual_triage_calendar
+msgid "Event Organization"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_account_move__exchange_rate
+#: model:ir.model.fields,field_description:its_triage.field_account_payment__exchange_rate
+msgid "Exchange rate"
+msgstr "Taux de change"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.view_purchase_report_form
+#: model_terms:ir.ui.view,arch_db:its_triage.view_sale_report_form
+#: model_terms:ir.ui.view,arch_db:its_triage.view_triage_report_form
+msgid "Export"
+msgstr "Exporter"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.view_purchase_report_form
+#: model_terms:ir.ui.view,arch_db:its_triage.view_sale_report_form
+#: model_terms:ir.ui.view,arch_db:its_triage.view_triage_report_form
+msgid "Export Excel"
+msgstr ""
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.purchase_order_form_inherit
+#: model_terms:ir.ui.view,arch_db:its_triage.view_move_form_inherit
+msgid "Fees"
+msgstr "Frais"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__fimugation_certificate
+msgid "Fimugation certificate"
+msgstr "Certificat fimugation"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__message_follower_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__message_follower_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__message_follower_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__message_channel_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__message_channel_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__message_channel_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__message_partner_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__message_partner_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__message_partner_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_purchase_order__freight_charges
+msgid "Freight Charges"
+msgstr "Frais de transport"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "GENERAL TOTAL"
+msgstr "TOTAL GÉNÉRAL"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "General Information"
+msgstr "Informations générales"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_run_form
+msgid "Generate Payslips"
+msgstr "Générer les bulletins de paie"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_manual_triage_search
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_search
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_triage_search
+msgid "Group By"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__honorary_llyods
+msgid "Honorary Llyod's"
+msgstr "Honoraire Llyod's"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_capacity__id
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__id
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging_line__id
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__id
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__id
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__id
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__id
+#: model:ir.model.fields,field_description:its_triage.field_purchase_xlsx_report__id
+#: model:ir.model.fields,field_description:its_triage.field_sale_xlsx_report__id
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_line__id
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_value__id
+#: model:ir.model.fields,field_description:its_triage.field_triage_line__id
+#: model:ir.model.fields,field_description:its_triage.field_triage_product__id
+#: model:ir.model.fields,field_description:its_triage.field_triage_xlsx_report__id
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard__id
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard_line__id
+msgid "ID"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__activity_exception_icon
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__activity_exception_icon
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__activity_exception_icon
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,help:its_triage.field_operation_packaging__activity_exception_icon
+#: model:ir.model.fields,help:its_triage.field_operation_payslip__activity_exception_icon
+#: model:ir.model.fields,help:its_triage.field_operation_payslip_run__activity_exception_icon
+#: model:ir.model.fields,help:its_triage.field_operation_triage__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,help:its_triage.field_operation_packaging__message_needaction
+#: model:ir.model.fields,help:its_triage.field_operation_packaging__message_unread
+#: model:ir.model.fields,help:its_triage.field_operation_payslip__message_needaction
+#: model:ir.model.fields,help:its_triage.field_operation_payslip__message_unread
+#: model:ir.model.fields,help:its_triage.field_operation_payslip_run__message_needaction
+#: model:ir.model.fields,help:its_triage.field_operation_payslip_run__message_unread
+#: model:ir.model.fields,help:its_triage.field_operation_triage__message_needaction
+#: model:ir.model.fields,help:its_triage.field_operation_triage__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,help:its_triage.field_operation_packaging__message_has_error
+#: model:ir.model.fields,help:its_triage.field_operation_packaging__message_has_sms_error
+#: model:ir.model.fields,help:its_triage.field_operation_payslip__message_has_error
+#: model:ir.model.fields,help:its_triage.field_operation_payslip__message_has_sms_error
+#: model:ir.model.fields,help:its_triage.field_operation_payslip_run__message_has_error
+#: model:ir.model.fields,help:its_triage.field_operation_payslip_run__message_has_sms_error
+#: model:ir.model.fields,help:its_triage.field_operation_triage__message_has_error
+#: model:ir.model.fields,help:its_triage.field_operation_triage__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,help:its_triage.field_operation_payslip_run__credit_note
+msgid ""
+"If its checked, indicates that all payslips generated from here are refund "
+"payslips."
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,help:its_triage.field_operation_payslip__credit_note
+msgid "Indicates this payslip has a refund of another"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__message_is_follower
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__message_is_follower
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__message_is_follower
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_account_move
+msgid "Journal Entries"
+msgstr "Pièces comptables"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__label
+msgid "Label"
+msgstr "Étiquette"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_capacity____last_update
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging____last_update
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging_line____last_update
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip____last_update
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line____last_update
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run____last_update
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage____last_update
+#: model:ir.model.fields,field_description:its_triage.field_purchase_xlsx_report____last_update
+#: model:ir.model.fields,field_description:its_triage.field_sale_xlsx_report____last_update
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_line____last_update
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_value____last_update
+#: model:ir.model.fields,field_description:its_triage.field_triage_line____last_update
+#: model:ir.model.fields,field_description:its_triage.field_triage_product____last_update
+#: model:ir.model.fields,field_description:its_triage.field_triage_xlsx_report____last_update
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard____last_update
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_capacity__write_uid
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__write_uid
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging_line__write_uid
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__write_uid
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__write_uid
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__write_uid
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__write_uid
+#: model:ir.model.fields,field_description:its_triage.field_purchase_xlsx_report__write_uid
+#: model:ir.model.fields,field_description:its_triage.field_sale_xlsx_report__write_uid
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_line__write_uid
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_value__write_uid
+#: model:ir.model.fields,field_description:its_triage.field_triage_line__write_uid
+#: model:ir.model.fields,field_description:its_triage.field_triage_product__write_uid
+#: model:ir.model.fields,field_description:its_triage.field_triage_xlsx_report__write_uid
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard__write_uid
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_capacity__write_date
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__write_date
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging_line__write_date
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__write_date
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__write_date
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__write_date
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__write_date
+#: model:ir.model.fields,field_description:its_triage.field_purchase_xlsx_report__write_date
+#: model:ir.model.fields,field_description:its_triage.field_sale_xlsx_report__write_date
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_line__write_date
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_value__write_date
+#: model:ir.model.fields,field_description:its_triage.field_triage_line__write_date
+#: model:ir.model.fields,field_description:its_triage.field_triage_product__write_date
+#: model:ir.model.fields,field_description:its_triage.field_triage_xlsx_report__write_date
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard__write_date
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__line_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__line_ids
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard__line_ids
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_packaging_form
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_triage_form
+#: model_terms:ir.ui.view,arch_db:its_triage.update_quantity_wizard_view
+msgid "Lines"
+msgstr "Lignes"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__message_main_attachment_id
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__message_main_attachment_id
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__message_main_attachment_id
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: model:ir.model.fields.selection,name:its_triage.selection__operation_triage__type__manual
+#: model:ir.model.fields.selection,name:its_triage.selection__triage_xlsx_report__type__manual
+#, python-format
+msgid "Manual"
+msgstr "Manuel"
+
+#. module: its_triage
+#: model:ir.actions.act_window,name:its_triage.operation_manual_triage_menu_action
+#: model:ir.ui.menu,name:its_triage.manuals_menu
+msgid "Manuals"
+msgstr "Manuelles"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_run_form
+msgid "Mark As Done"
+msgstr "Marquer comme fait"
+
+#. module: its_triage
+#: model:ir.ui.menu,name:its_triage.master_data_menu
+msgid "Master Data"
+msgstr "Données de base"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__message_has_error
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__message_has_error
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__message_has_error
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__message_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__message_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__message_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: code:addons/its_triage/models/operation_payslip.py:0
+#: code:addons/its_triage/models/operation_triage.py:0
+#: code:addons/its_triage/models/operation_triage.py:0
+#: code:addons/its_triage/models/operation_triage.py:0
+#: code:addons/its_triage/models/operation_triage.py:0
+#, python-format
+msgid "Missing"
+msgstr "Manquant"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: model:ir.model.fields,field_description:its_triage.field_operation_capacity__name
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__name
+#, python-format
+msgid "Name"
+msgstr "Nom"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__activity_date_deadline
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__activity_date_deadline
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__activity_date_deadline
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__activity_summary
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__activity_summary
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__activity_summary
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__activity_type_id
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__activity_type_id
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__activity_type_id
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields.selection,name:its_triage.selection__operation_payslip_line__display_type__line_note
+msgid "Note"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__name
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__name
+msgid "Number"
+msgstr "Numéro"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__message_needaction_counter
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__message_needaction_counter
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__message_needaction_counter
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: code:addons/its_triage/controllers/main.py:0
+#: code:addons/its_triage/controllers/main.py:0
+#: model:ir.model.fields,field_description:its_triage.field_purchase_order_line__number_of_bags
+#: model:ir.model.fields,field_description:its_triage.field_sale_order_line__number_of_bags
+#, python-format
+msgid "Number of Bags"
+msgstr "Nb de sacs"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__number_of_container
+#, python-format
+msgid "Number of container"
+msgstr "Nombre de conteneurs"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__message_has_error_counter
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__message_has_error_counter
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__message_has_error_counter
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,help:its_triage.field_operation_packaging__message_needaction_counter
+#: model:ir.model.fields,help:its_triage.field_operation_payslip__message_needaction_counter
+#: model:ir.model.fields,help:its_triage.field_operation_payslip_run__message_needaction_counter
+#: model:ir.model.fields,help:its_triage.field_operation_triage__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,help:its_triage.field_operation_packaging__message_has_error_counter
+#: model:ir.model.fields,help:its_triage.field_operation_payslip__message_has_error_counter
+#: model:ir.model.fields,help:its_triage.field_operation_payslip_run__message_has_error_counter
+#: model:ir.model.fields,help:its_triage.field_operation_triage__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,help:its_triage.field_operation_packaging__message_unread_counter
+#: model:ir.model.fields,help:its_triage.field_operation_payslip__message_unread_counter
+#: model:ir.model.fields,help:its_triage.field_operation_payslip_run__message_unread_counter
+#: model:ir.model.fields,help:its_triage.field_operation_triage__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: its_triage
+#: code:addons/its_triage/models/operation_triage.py:0
+#, python-format
+msgid ""
+"On the product %s you cannot associate the value %s with the attribute %s "
+"because they do not match."
+msgstr ""
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_capacity_form
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_capacity_tree
+msgid "Operation Capacity"
+msgstr ""
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_manual_triage_search
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_triage_search
+msgid "Operation Triages"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.ui.menu,name:its_triage.management_menu
+msgid "Operations"
+msgstr "Opérations"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "Order Number"
+msgstr "Numéro de commande"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "Orders - %s.xlsx"
+msgstr "Commandes d'achat - %s.xlsx"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: model:ir.model.fields,field_description:its_triage.field_account_move__other_expenses
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__other_expenses
+#: model_terms:ir.ui.view,arch_db:its_triage.view_order_form_inherit
+#, python-format
+msgid "Other Expenses"
+msgstr "Autres dépenses"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__output_date
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_manual_triage_search
+msgid "Output Date"
+msgstr "Date de sortie"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__output_quantity
+#: model:ir.model.fields,field_description:its_triage.field_triage_product__output_quantity
+msgid "Output Quantity"
+msgstr "Quantité de sortie"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "Output weight"
+msgstr "Poids de sortie"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__pg_gasy_net
+msgid "PG Gasy net"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_operation_packaging
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging_line__packaging_id
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard_line__wiz_id
+msgid "Packaging"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.actions.act_window,name:its_triage.operation_packaging_menu_action
+#: model:ir.ui.menu,name:its_triage.packagings_menu
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_packaging_form
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_packaging_tree
+msgid "Packagings"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_operation_payslip
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__slip_id
+msgid "Pay Slip"
+msgstr "Bulletin de paie"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_search
+msgid "PaySlip Batch"
+msgstr "Lot de bulletins de paie"
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_account_payment
+msgid "Payments"
+msgstr "Paiements"
+
+#. module: its_triage
+#: model:ir.ui.menu,name:its_triage.payroll_menu
+msgid "Payroll"
+msgstr "Paie"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_form
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_graph
+msgid "Payslip"
+msgstr "Bulletin de paie"
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_operation_payslip_run
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__payslip_run_id
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_run_search
+msgid "Payslip Batches"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__payslip_count
+msgid "Payslip Computation Details"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_operation_payslip_line
+msgid "Payslip Line"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__line_ids
+msgid "Payslip Lines"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__name
+msgid "Payslip Name"
+msgstr "Nom de bulletin de paie"
+
+#. module: its_triage
+#: model:ir.actions.act_window,name:its_triage.operation_payslip_menu_action
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__slip_ids
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_run_form
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_search
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_tree
+msgid "Payslips"
+msgstr "Bulletins de paie"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_pivot
+msgid "Payslips Analysis"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.actions.act_window,name:its_triage.operation_payslip_run_menu_action
+#: model:ir.ui.menu,name:its_triage.payslips_batches_menu
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_run_form
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_run_tree
+msgid "Payslips Batches"
+msgstr "Lots de bulletins de paie"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_form
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_run_form
+#: model_terms:ir.ui.view,arch_db:its_triage.view_purchase_report_form
+#: model_terms:ir.ui.view,arch_db:its_triage.view_sale_report_form
+#: model_terms:ir.ui.view,arch_db:its_triage.view_triage_report_form
+msgid "Period"
+msgstr "Période"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__phyto_commission
+msgid "Phyto Commission"
+msgstr "Comission phyto"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__phytosanitary_certificate
+msgid "Phytosanitary certificate"
+msgstr "Certificat phytosanitaire"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: code:addons/its_triage/controllers/main.py:0
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "Price Total"
+msgstr "Prix total"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "Price of Kg"
+msgstr "Prix du Kg"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__product_id
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__name
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__product_id
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__product_id
+#: model:ir.model.fields,field_description:its_triage.field_triage_product__product_id
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard__product_id
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_manual_triage_search
+msgid "Product"
+msgstr "Article"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__attribute_line_ids
+msgid "Product Attributes"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__product_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__product_list_ids
+#: model:ir.ui.menu,name:its_triage.products_menu
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_triage_form
+msgid "Products"
+msgstr "Articles"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "Purchase Details"
+msgstr "Détails des achats"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__purchase_msc_lead
+msgid "Purchase MSC lead"
+msgstr "Achat plomb msc"
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_purchase_order
+msgid "Purchase Order"
+msgstr "Commande fournisseur"
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Ligne de commande d'achat"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "Purchase Summary"
+msgstr "Résumé des achats"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "Quality"
+msgstr "Qualité"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging_line__quantity
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__quantity
+#: model:ir.model.fields,field_description:its_triage.field_triage_line__quantity
+#: model:ir.model.fields,field_description:its_triage.field_update_quantity_wizard_line__quantity
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__qty_available
+#: model:ir.model.fields,field_description:its_triage.field_triage_product__qty_available
+msgid "Quantity On Hand"
+msgstr "Quantité disponible"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "Ref."
+msgstr "Réf."
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__number
+msgid "Reference"
+msgstr "Référence"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__region_rebate
+msgid "Region rebate"
+msgstr "Ristourne Région"
+
+#. module: its_triage
+#: model:ir.model.fields.selection,name:its_triage.selection__operation_payslip__state__cancel
+msgid "Rejected"
+msgstr "Rejeté"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_value__ptav_product_variant_ids
+msgid "Related Variants"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.ui.menu,name:its_triage.report_menu
+msgid "Reporting"
+msgstr "Analyse"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__activity_user_id
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__activity_user_id
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__activity_user_id
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: model_terms:ir.ui.view,arch_db:its_triage.view_order_form_inherit
+#, python-format
+msgid "Rights and taxes"
+msgstr "Droits et taxes"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__message_has_sms_error
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__message_has_sms_error
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__message_has_sms_error
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: its_triage
+#: code:addons/its_triage/models/operation_payslip.py:0
+#, python-format
+msgid "Salary Slip of %s for %s to %s"
+msgstr "Bulletin de paie de %s pour le %s au %s"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "Sales"
+msgstr "Ventes"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "Sales - %s.xlsx"
+msgstr "Commandes de vente - %s.xlsx"
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Ligne de bons de commande"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__sea_freight
+msgid "Sea freight"
+msgstr "Fret Maritime"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_run_search
+msgid "Search Payslip Batches"
+msgstr ""
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_search
+msgid "Search Payslips"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields.selection,name:its_triage.selection__operation_payslip_line__display_type__line_section
+msgid "Section"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_form
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_run_form
+msgid "Set to Draft"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.actions.act_window,name:its_triage.config_settings_action
+#: model:ir.ui.menu,name:its_triage.settings_menu
+msgid "Settings"
+msgstr "Configuration"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: model:ir.model.fields.selection,name:its_triage.selection__operation_triage__type__small
+#: model:ir.model.fields.selection,name:its_triage.selection__triage_xlsx_report__type__small
+#, python-format
+msgid "Small"
+msgstr "Petit"
+
+#. module: its_triage
+#: model:ir.actions.act_window,name:its_triage.operation_small_triage_menu_action
+#: model:ir.ui.menu,name:its_triage.smalls_menu
+msgid "Smalls"
+msgstr ""
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_triage_form
+msgid "Sort"
+msgstr "Trier"
+
+#. module: its_triage
+#: model:ir.model.fields.selection,name:its_triage.selection__operation_triage__state__sorted
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_triage_form
+msgid "Sorted"
+msgstr "Trié"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__state
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__state
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__state
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_manual_triage_search
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_search
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_triage_search
+msgid "State"
+msgstr "État"
+
+#. module: its_triage
+#: model:ir.model.fields,help:its_triage.field_operation_packaging__activity_state
+#: model:ir.model.fields,help:its_triage.field_operation_payslip__activity_state
+#: model:ir.model.fields,help:its_triage.field_operation_payslip_run__activity_state
+#: model:ir.model.fields,help:its_triage.field_operation_triage__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_stock_move
+msgid "Stock Move"
+msgstr "Stock déplacer"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__stuffing
+msgid "Stuffing"
+msgstr "Empotage"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__stuffing_truck
+msgid "Stuffing truck"
+msgstr "Camion pour empotage"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__subtotal
+msgid "Subtotal"
+msgstr "Sous-total"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "Supplier"
+msgstr "Fournisseur"
+
+#. module: its_triage
+#: model:ir.model.fields,help:its_triage.field_operation_payslip_line__display_type
+msgid "Technical field for UX purpose."
+msgstr ""
+
+#. module: its_triage
+#: code:addons/its_triage/models/operation_triage.py:0
+#, python-format
+msgid "The attribute %s must have at least one value for the product %s."
+msgstr "L'attribut %s doit avoir au moins une valeur pour le produit %s."
+
+#. module: its_triage
+#: code:addons/its_triage/models/operation_triage.py:0
+#, python-format
+msgid "The attribute %s must have at least one value for the products %s."
+msgstr "L'attribut %s doit avoir au moins une valeur pour les produits %s."
+
+#. module: its_triage
+#: code:addons/its_triage/models/operation_triage.py:0
+#, python-format
+msgid "The value %s is not defined for the attribute %s on the product %s."
+msgstr "La valeur %s n'est pas définie pour l'attribut %s sur le produit %s."
+
+#. module: its_triage
+#: code:addons/its_triage/models/operation_triage.py:0
+#, python-format
+msgid ""
+"This operation is not allowed, the sum of the quantities produced is greater"
+" than the sum of the quantities introduced."
+msgstr ""
+"Cette opération n'est pas autorisée, la somme des quantités produites est "
+"supérieure à la somme des quantités introduites."
+
+#. module: its_triage
+#: code:addons/its_triage/models/operation_triage.py:0
+#: code:addons/its_triage/models/operation_triage.py:0
+#, python-format
+msgid ""
+"This operation is not allowed, you do not have enough quantity in stock."
+msgstr ""
+"Cette opération n'est pas autorisée, vous n'avez pas assez de quantité en "
+"stock."
+
+#. module: its_triage
+#: code:addons/its_triage/models/sale_order.py:0
+#, python-format
+msgid ""
+"This product is packaged for %.2f bag(s) of %s. You try to sell %.2f bag(s)."
+msgstr ""
+"Ce produit est emballé pour %.2f sac(s) de %s. Vous essayez de vendre %.2f "
+"sac(s)."
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_line__total
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_triage_form
+msgid "Total"
+msgstr ""
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "Total Cost"
+msgstr "Coût total"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "Total Docker Cost"
+msgstr "Coût total Docker"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "Total Purchase"
+msgstr "Total des achats"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_manual_triage_tree
+msgid "Total Wage"
+msgstr ""
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_run_form
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_tree
+msgid "Total amount"
+msgstr "Montant total"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "Total number of bags"
+msgstr "Nombre total de sacs"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_tree
+msgid "Total ticket"
+msgstr "Total billet"
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: code:addons/its_triage/controllers/main.py:0
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "Total weight in kg"
+msgstr "Poids total en kg"
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_account_move__transfer_fee
+msgid "Transfer fee"
+msgstr "Frais de transfert"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_sale_order__transit
+msgid "Transit"
+msgstr ""
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: model_terms:ir.ui.view,arch_db:its_triage.view_order_form_inherit
+#, python-format
+msgid "Transport Delivery"
+msgstr "Transport Livraison"
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_operation_triage
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_line__triage_id
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_value__triage_id
+#: model:ir.model.fields,field_description:its_triage.field_triage_line__triage_id
+#: model:ir.model.fields,field_description:its_triage.field_triage_product__triage_id
+#: model_terms:ir.ui.view,arch_db:its_triage.res_config_settings_view_form
+msgid "Triage"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_triage_attribute_line
+msgid "Triage Attribute Line"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_triage_attribute_value
+msgid "Triage Attribute Value"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_line__product_template_value_ids
+msgid "Triage Attribute Values"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_operation_packaging_line
+#: model:ir.model,name:its_triage.model_triage_line
+msgid "Triage Line"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_triage_product
+msgid "Triage Product"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.ui.menu,name:its_triage.triage_menu_root
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_manual_triage_tree
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_triage_form
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_triage_tree
+msgid "Triages"
+msgstr ""
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#, python-format
+msgid "Triages - %s.xlsx"
+msgstr ""
+
+#. module: its_triage
+#: code:addons/its_triage/controllers/main.py:0
+#: model:ir.model.fields,field_description:its_triage.field_purchase_order__truck_number
+#, python-format
+msgid "Truck Number"
+msgstr "Numéro de camion"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__type
+#: model:ir.model.fields,field_description:its_triage.field_triage_xlsx_report__type
+msgid "Type"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,help:its_triage.field_operation_packaging__activity_exception_decoration
+#: model:ir.model.fields,help:its_triage.field_operation_payslip__activity_exception_decoration
+#: model:ir.model.fields,help:its_triage.field_operation_payslip_run__activity_exception_decoration
+#: model:ir.model.fields,help:its_triage.field_operation_triage__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__uom_id
+msgid "Unit of Measure"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__uom_name
+msgid "Unit of Measure Name"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__message_unread
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__message_unread
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__message_unread
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__message_unread_counter
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__message_unread_counter
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__message_unread_counter
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.update_quantity_wizard_view
+msgid "Update"
+msgstr "Mettre à jour"
+
+#. module: its_triage
+#: code:addons/its_triage/models/operation_packaging.py:0
+#: model:ir.model,name:its_triage.model_update_quantity_wizard
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_packaging_form
+#, python-format
+msgid "Update Quantity"
+msgstr "Mettre la quantité à jour"
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_update_quantity_wizard_line
+msgid "Update Quantity Line"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_value__name
+msgid "Value"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_triage_attribute_line__value_ids
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_triage_form
+msgid "Values"
+msgstr "Valeurs"
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_triage_form
+msgid "Variants"
+msgstr "Variantes"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__wage
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__wage
+#: model_terms:ir.ui.view,arch_db:its_triage.res_config_settings_view_form
+msgid "Wage"
+msgstr "Salaire"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_res_config_settings__wage_per_unit
+msgid "Wage per Unit"
+msgstr "Salaire par unité"
+
+#. module: its_triage
+#: model:ir.model.fields.selection,name:its_triage.selection__operation_payslip__state__verify
+msgid "Waiting"
+msgstr "En attente"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_operation_packaging__website_message_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip__website_message_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_payslip_run__website_message_ids
+#: model:ir.model.fields,field_description:its_triage.field_operation_triage__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model.fields,help:its_triage.field_operation_packaging__website_message_ids
+#: model:ir.model.fields,help:its_triage.field_operation_payslip__website_message_ids
+#: model:ir.model.fields,help:its_triage.field_operation_payslip_run__website_message_ids
+#: model:ir.model.fields,help:its_triage.field_operation_triage__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.operation_payslip_form
+msgid "Worked Days"
+msgstr "Jours travaillés"
+
+#. module: its_triage
+#: model:ir.actions.act_window,name:its_triage.purchase_xls_report_menu_action
+#: model:ir.actions.act_window,name:its_triage.sale_xls_report_menu_action
+#: model:ir.actions.act_window,name:its_triage.triage_xls_report_menu_action
+#: model:ir.ui.menu,name:its_triage.purchase_xls_report_report_menu
+#: model:ir.ui.menu,name:its_triage.sale_xls_report_report_menu
+#: model:ir.ui.menu,name:its_triage.triage_xls_report_report_menu
+msgid "XLSX Export"
+msgstr "Export XLSX"
+
+#. module: its_triage
+#: code:addons/its_triage/models/operation_payslip.py:0
+#, python-format
+msgid "You Cannot Delete Done Payslips Batches"
+msgstr "Vous ne pouvez pas supprimer les lots de bulleints de paie terminés"
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_purchase_xlsx_report
+msgid "purchase.xlsx.report"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_sale_xlsx_report
+msgid "sale.xlsx.report"
+msgstr ""
+
+#. module: its_triage
+#: model:ir.model,name:its_triage.model_triage_xlsx_report
+msgid "triage.xlsx.report"
+msgstr ""

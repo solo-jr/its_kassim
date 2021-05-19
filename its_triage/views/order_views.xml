@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <record id="view_order_form_inherit" model="ir.ui.view">
+      <field name="name">its.sale.order.form.inherit</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='payment_term_id']" position="after">
+          <field name="number_of_container"/>
+        </xpath>
+        <xpath expr="//field[@name='order_line']/tree//field[@name='name']" position="after">
+          <field name="number_of_bags"/>
+          <field name="bag_capacity_id" options='{"no_open": True, "no_create": True}'/>
+        </xpath>
+        <xpath expr="//field[@name='order_line']" position="after">
+          <group string="Rights and taxes">
+            <group>
+              <field name="pg_gasy_net" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+              <field name="docker_stuffing_costs" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+              <field name="fimugation_certificate" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+              <field name="phytosanitary_certificate" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+            </group>
+            <group>
+              <field name="region_rebate" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+              <field name="apmf" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+              <field name="ccco_commerce_law" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+              <field name="certificate_of_origin" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+              <field name="honorary_llyods" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+            </group>
+          </group>
+          <group>
+            <group string="Departure costs">
+              <field name="sea_freight" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+              <field name="boarding_and_scan" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+              <field name="purchase_msc_lead" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+              <field name="application_fees" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+            </group>
+            <group string="Transport Delivery">
+              <field name="stuffing_truck" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+              <field name="transit" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+              <field name="disbursement_costs" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+            </group>
+          </group>
+          <group string="Other Expenses">
+            <group>
+              <field name="label" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+              <field name="stuffing" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+              <field name="phyto_commission" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+            </group>
+            <group>
+              <field name="dhl_shipping" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+              <field name="other_expenses" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+            </group>
+          </group>
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</odoo>

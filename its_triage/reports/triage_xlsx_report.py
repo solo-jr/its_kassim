@@ -1,0 +1,50 @@
+# -*- encoding: utf-8 -*-
+##############################################################################
+#
+#    OpenERP, Open Source Management Solution
+#    Copyright (C) 2021 IT-Solutions.mg. All Rights Reserved
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+from datetime import date, datetime
+
+from dateutil.relativedelta import relativedelta
+
+from odoo import fields, models
+from odoo.osv.expression import AND
+
+
+class TriageXlsxReport(models.TransientModel):
+    _name = "triage.xlsx.report"
+
+    type = fields.Selection([('auto', 'Auto'), ('manual', 'Manual'), ('small', 'Small')], default='manual')
+    date_start = fields.Date(string='Date From', required=True,
+                             default=lambda self: fields.Date.to_string(date.today().replace(day=1)))
+    date_end = fields.Date(string='Date To', required=True,
+                           default=lambda self: fields.Date.to_string(
+                               (datetime.now() + relativedelta(months=+1, day=1, days=-1)).date()))
+
+    def action_export(self):
+        domain = [('type', '=', self.type), ('state', '=', 'sorted')]
+        if self.type == 'manual':
+            domain += AND([domain, [('entry_date', '>=', self.date_start), ('entry_date', '<=', self.date_end)]])
+        else:
+            domain += AND([domain, [('output_date', '>=', self.date_start), ('output_date', '<=', self.date_end)]])
+        triage_ids = self.env['operation.triage'].sudo().search(domain, order='date')
+
+        return {
+            'type': 'ir.actions.act_url',
+            'url': '/web/binary/download_triage_xlsx_report?ids=%s&type=%s' % (triage_ids.ids, self.type)
+        }
