@@ -94,7 +94,8 @@ class OperationPayslip(models.Model):
     def _compute_subtotal(self):
         for rec in self:
             rec.subtotal = sum(rec.line_ids.mapped('total'))
-            rec.amount_total = rec.wage + rec.subtotal
+            # rec.amount_total = rec.wage + rec.subtotal
+            rec.amount_total = rec.subtotal
             remaining = rec.amount_total
             for ticket in TICKETS:
                 # Get number of tickets
@@ -123,8 +124,12 @@ class OperationPayslip(models.Model):
         # Retrieve all triages from the selected period
         triage_ids = triage_obj.search(
             [('type', '=', 'manual'), ('employee_id', '=', payslip_id.employee_id.id)]).filtered(
-            lambda x: fields.Datetime.from_string(date_from) <= x.output_date <= date_to or fields.Datetime.from_string(
-                date_from) <= x.entry_date <= date_to)
+            lambda x: x.state != 'draft' and x.entry_date and (fields.Datetime.from_string(
+                date_from
+            ) <= x.output_date <= date_to or fields.Datetime.from_string(
+                date_from
+            ) <= x.entry_date <= date_to)
+        )
         res = []
         for triage_id in triage_ids:
             res += [{'display_type': 'line_section',
@@ -339,9 +344,14 @@ class OperationPayslipRun(models.Model):
         # Stop by default date end to 23:59:59
         to_date = fields.Datetime.from_string(self.date_end) + timedelta(days=1, seconds=-1)
         # Retrieve all triages from the selected period
+
         triage_ids = triage_obj.search([('type', '=', 'manual')]).filtered(
-            lambda x: fields.Datetime.from_string(from_date) <= x.output_date <= to_date or fields.Datetime.from_string(
-                from_date) <= x.entry_date <= to_date)
+            lambda x:  x.state != 'draft' and x.entry_date and (fields.Datetime.from_string(
+                from_date
+            ) <= x.output_date <= to_date or fields.Datetime.from_string(
+                from_date
+            ) <= x.entry_date <= to_date)
+        )
         for employee in employee_obj.search([('id', 'in', triage_ids.mapped('employee_id').ids)]):
             slip_data = payslip_obj.onchange_employee_id(from_date, to_date, employee.id, contract_id=False)
             res = {
