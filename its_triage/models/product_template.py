@@ -22,24 +22,6 @@
 from odoo import fields, models, api
 
 
-# class TriageAttributeLine(models.Model):
-#     """Attributes available on operation.triage with their selected values in a m2m.
-#     Used as a configuration model to generate the appropriate triage.attribute.value"""
-#
-#     _name = "default.triage.attribute"
-#     _rec_name = 'attribute_id'
-#     _description = 'Triage Attribute Line'
-#     _order = 'attribute_id, id'
-#
-#     active = fields.Boolean(default=True)
-#     triage_id = fields.Many2one('operation.triage', string='Triage', index=True)
-#     attribute_id = fields.Many2one('product.attribute', string="Attribute", index=True)
-#     value_ids = fields.Many2many('product.attribute.value', string="Values",
-#                                  domain="[('attribute_id', '=', attribute_id)]",
-#                                  relation='product_attribute_value_triage_attribute_line_rel')
-    # product_template_value_ids = fields.One2many('triage.attribute.value', 'attribute_line_id',
-    #                                              string="Triage Attribute Values")
-
 class ProductTemplate(models.Model):
     _inherit = 'product.template'
 
