@@ -30,6 +30,67 @@ class OperationTriage(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _order = 'date desc, id desc'
 
+    def _default_product_list_ids(self):
+        triage_type = self.env.context.get('default_type')
+        default_value_type = 'is_dv_automatic_sorting'  # triage auto
+        if triage_type == 'small':
+            default_value_type = 'is_dv_smalls_sorting'  # triage small
+
+        default_tmpl = self.env['product.template'].search([(default_value_type, '=', True)])
+        if default_tmpl and any([default_tmpl[0].as_product_input_ids, default_tmpl[0].ss_product_input_ids]):
+            default_product_value = []
+            product_input_ids = default_tmpl[0].as_product_input_ids
+            if triage_type == 'small':
+                product_input_ids = default_tmpl[0].ss_product_input_ids  # triage small
+            for default_product in product_input_ids:
+                default_product_value.append((0, 0, {'product_id': default_product.id}))
+            return default_product_value
+        return []
+
+    def _default_product_id(self):
+        triage_type = self.env.context.get('default_type')
+        if triage_type == 'manual':
+            default_value_type = 'is_dv_manual_sorting'  # triage manual
+            default_tmpl = self.env['product.template'].search([(default_value_type, '=', True)])
+            if default_tmpl and default_tmpl[0].ms_product_input_id:
+                return default_tmpl[0].ms_product_input_id.id  # triage manual
+        return False
+
+    def _default_attribute_line_ids(self):
+        triage_type = self.env.context.get('default_type')
+        default_value_type = 'is_dv_automatic_sorting'  # triage auto
+        if triage_type == 'manual':
+            default_value_type = 'is_dv_manual_sorting'  # triage manual
+        elif triage_type == 'small':
+            default_value_type = 'is_dv_smalls_sorting'  # triage small
+
+        default_tmpl = self.env['product.template'].search([(default_value_type, '=', True)])
+        if default_tmpl and any([default_tmpl[0].as_product_output_ids, default_tmpl[0].ms_product_output_ids, default_tmpl[0].ss_product_output_ids]):
+            product_output_ids = default_tmpl[0].as_product_output_ids  # triage auto
+            if triage_type == 'manual':
+                product_output_ids = default_tmpl[0].ms_product_output_ids  # triage manual
+            elif triage_type == 'small':
+                product_output_ids = default_tmpl[0].ss_product_output_ids  # triage small
+            default_value_attribute_line = []
+            for product_output in product_output_ids:
+                for ptav in product_output.product_template_attribute_value_ids:
+                    product_attribute_value = ptav.product_attribute_value_id
+                    product_attribute = ptav.product_attribute_value_id.attribute_id
+                    checked = False
+                    for z1, z2, dva in default_value_attribute_line:
+                        if dva["attribute_id"] == product_attribute.id:
+                            dva["value_ids"].append((4, product_attribute_value.id, 0))
+                            checked = True
+                    if not checked:
+                        new_default_line = (0, 0,
+                                           {
+                                               'attribute_id': product_attribute.id,
+                                               'value_ids': [(4, product_attribute_value.id, 0)]
+                                           })
+                        default_value_attribute_line.append(new_default_line)
+            return default_value_attribute_line
+        return []
+
     name = fields.Char(string='Number', required=True, copy=False, default='/')
     currency_id = fields.Many2one('res.currency', string='Currency',
                                   default=lambda self: self.env.company.currency_id.id)
@@ -37,9 +98,10 @@ class OperationTriage(models.Model):
     output_date = fields.Datetime(string='Output Date', default=lambda self: fields.Datetime.now())
     entry_date = fields.Datetime(string='Entry Date')
     type = fields.Selection([('auto', 'Auto'), ('manual', 'Manual'), ('small', 'Small')])
-    product_id = fields.Many2one('product.product', string='Product')
+    product_id = fields.Many2one('product.product', string='Product', default=_default_product_id)
     product_ids = fields.Many2many('product.product', string='Products')
-    product_list_ids = fields.One2many('triage.product', 'triage_id', string='Products')
+    product_list_ids = fields.One2many('triage.product', 'triage_id', string='Products',
+                                       default=_default_product_list_ids)
     uom_id = fields.Many2one(related='product_id.uom_id')
     uom_name = fields.Char(string='Unit of Measure Name', related='uom_id.name', readonly=True)
     qty_available = fields.Float(string='Quantity On Hand', digits='Product Unit of Measure', tracking=True,
@@ -47,7 +109,7 @@ class OperationTriage(models.Model):
     numbers_of_all_round_bags = fields.Float("Numbers of all-round bags")
 
     attribute_line_ids = fields.One2many('triage.attribute.line', 'triage_id', 'Product Attributes',
-                                         copy=True)
+                                         copy=True, default=_default_attribute_line_ids)
     line_ids = fields.One2many('triage.line', 'triage_id', string='Lines')
 
     state = fields.Selection([

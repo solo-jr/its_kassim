@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-19 21:03+0000\n"
-"PO-Revision-Date: 2021-05-19 21:03+0000\n"
+"POT-Creation-Date: 2021-05-29 20:33+0000\n"
+"PO-Revision-Date: 2021-05-29 20:33+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -462,9 +462,32 @@ msgid "Date To"
 msgstr "Date fin"
 
 #. module: its_triage
+#: model_terms:ir.ui.view,arch_db:its_triage.its_product_template_form_views
+msgid "Default Values"
+msgstr "Valeurs par défaut"
+
+#. module: its_triage
 #: model:ir.model.fields,help:its_triage.field_operation_triage__uom_id
 msgid "Default unit of measure used for all stock operations."
-msgstr ""
+msgstr "Unité de mesure par défaut utilisée pour toutes les opérations de stock."
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_product_product__is_dv_automatic_sorting
+#: model:ir.model.fields,field_description:its_triage.field_product_template__is_dv_automatic_sorting
+msgid "Default values for automatic sorting"
+msgstr "Valeurs par défaut pour le tri automatique"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_product_product__is_dv_manual_sorting
+#: model:ir.model.fields,field_description:its_triage.field_product_template__is_dv_manual_sorting
+msgid "Default values for manual sorting"
+msgstr "Valeurs par défaut pour le tri manuel"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_product_product__is_dv_smalls_sorting
+#: model:ir.model.fields,field_description:its_triage.field_product_template__is_dv_smalls_sorting
+msgid "Default values for smals sorting"
+msgstr "Valeurs par défaut pour le tri smals"
 
 #. module: its_triage
 #: code:addons/its_triage/controllers/main.py:0
@@ -1234,6 +1257,26 @@ msgstr ""
 #: model:ir.model,name:its_triage.model_product_template
 msgid "Product Template"
 msgstr "Modèle d'article"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_product_product__as_product_input_ids
+#: model:ir.model.fields,field_description:its_triage.field_product_product__ms_product_input_id
+#: model:ir.model.fields,field_description:its_triage.field_product_product__ss_product_input_ids
+#: model:ir.model.fields,field_description:its_triage.field_product_template__as_product_input_ids
+#: model:ir.model.fields,field_description:its_triage.field_product_template__ms_product_input_id
+#: model:ir.model.fields,field_description:its_triage.field_product_template__ss_product_input_ids
+msgid "Product input"
+msgstr "Entrée de produit"
+
+#. module: its_triage
+#: model:ir.model.fields,field_description:its_triage.field_product_product__as_product_output_ids
+#: model:ir.model.fields,field_description:its_triage.field_product_product__ms_product_output_ids
+#: model:ir.model.fields,field_description:its_triage.field_product_product__ss_product_output_ids
+#: model:ir.model.fields,field_description:its_triage.field_product_template__as_product_output_ids
+#: model:ir.model.fields,field_description:its_triage.field_product_template__ms_product_output_ids
+#: model:ir.model.fields,field_description:its_triage.field_product_template__ss_product_output_ids
+msgid "Product output"
+msgstr "Sortie de produit"
 
 #. module: its_triage
 #: model:ir.model.fields,field_description:its_triage.field_operation_triage__product_ids
